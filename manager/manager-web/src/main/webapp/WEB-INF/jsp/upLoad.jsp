@@ -9,31 +9,26 @@
 <textarea id="demo" style="display: none;"></textarea>
 
 
-
-
-
-
 <script type="text/javascript" src="${pageContext.request.contextPath}/lib/layui/layui.js" charset="utf-8"></script>
 <script>
-    layui.use('layedit',function(){
+    layui.use('layedit', function () {
         //创建变量
         var layedit = layui.layedit;
-        layedit.build('demo',{
-            uploadImage:{
-                url:'upload',
-                type:'post'
+        layedit.build('demo', {
+            uploadImage: {
+                url: 'upload',
+                type: 'post'
             }
         });
     });
 
 
-          $.ajax({
+    $.ajax({
 
-              url:showPicture
+        url: showPicture
 
 
-          });
-
+    });
 
 
 </script>

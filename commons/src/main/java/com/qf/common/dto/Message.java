@@ -1,10 +1,10 @@
 package com.qf.common.dto;
 
 public class Message {
-     private int id;
-     private String mname;
-     private String location;
-     private String mdesc;
+    private int id;
+    private String mname;
+    private String location;
+    private String mdesc;
 
     public Message() {
     }

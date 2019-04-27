@@ -5,9 +5,9 @@
     <title>Title</title>
 </head>
 <body>
-              <c:forEach items="${picList}" var="list" >
-                  <h1>${list.psrc}</h1>
-                  <img src="${list.psrc}" style="width: 400px;height: 300px">
-              </c:forEach>
+<c:forEach items="${picList}" var="list">
+    <h1>${list.psrc}</h1>
+    <img src="${list.psrc}" style="width: 400px;height: 300px">
+</c:forEach>
 </body>
 </html>

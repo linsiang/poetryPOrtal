@@ -48,8 +48,6 @@
     </bean>
 
 
-
-
     <!--配置视图解析器 Controller  hello(){return "index"}  转发：/WEB-INF/jsp/index.jsp -->
     <bean class="org.springframework.web.servlet.view.UrlBasedViewResolver">
         <property name="prefix" value="/WEB-INF/jsp/"/>

@@ -25,34 +25,35 @@ import java.util.Map;
 public class ManagerIndexAction {
     @Autowired
     private ShowPicMapper showPicMapper;
+
     @ResponseBody
     @PostMapping("/upload")
-    public Map<String,Object> upLoadPic(@RequestParam("file") MultipartFile file){
-        Map<String,Object> map = new HashMap();
-        try{
-        FastDFSFile fastDFSFile = new FastDFSFile(file.getBytes(),file.getOriginalFilename(),file.getSize());
-        String basePath = PropKit.use("fdfs_client.conf").get("fdfs_server");
-       String shortName = FastDFSUtils.uploadFile(fastDFSFile);
-       if(StringUtils.isNotBlank(shortName)){
-           map.put("code",0);
-           map.put("msg","success");
-           Map<String,Object> date = new HashMap();
-           date.put("src",basePath+"/"+shortName);
-           String psrc=basePath+"/"+shortName;
-           showPicMapper.addPsrc(psrc);
-          // System.out.println(basePath+"/"+shortName);
-           map.put("data",date);
+    public Map<String, Object> upLoadPic(@RequestParam("file") MultipartFile file) {
+        Map<String, Object> map = new HashMap();
+        try {
+            FastDFSFile fastDFSFile = new FastDFSFile(file.getBytes(), file.getOriginalFilename(), file.getSize());
+            String basePath = PropKit.use("fdfs_client.conf").get("fdfs_server");
+            String shortName = FastDFSUtils.uploadFile(fastDFSFile);
+            if (StringUtils.isNotBlank(shortName)) {
+                map.put("code", 0);
+                map.put("msg", "success");
+                Map<String, Object> date = new HashMap();
+                date.put("src", basePath + "/" + shortName);
+                String psrc = basePath + "/" + shortName;
+                showPicMapper.addPsrc(psrc);
+                // System.out.println(basePath+"/"+shortName);
+                map.put("data", date);
 
-       }else{
-           map.put("code",1);
+            } else {
+                map.put("code", 1);
 
-       }
-        }catch (IOException e){
-            map.put("code",1);
+            }
+        } catch (IOException e) {
+            map.put("code", 1);
 
             e.printStackTrace();
-        }catch(RuntimeException e){
-            map.put("code",1);
+        } catch (RuntimeException e) {
+            map.put("code", 1);
             e.printStackTrace();
         }
 
@@ -60,15 +61,15 @@ public class ManagerIndexAction {
     }
 
     @GetMapping("/showPicture")
-    public String showpic(Model model){
-        List<showPic> picList =  showPicMapper.fondUrl();
-        model.addAttribute("picList",picList);
-        return "showPic" ;
+    public String showpic(Model model) {
+        List<showPic> picList = showPicMapper.fondUrl();
+        model.addAttribute("picList", picList);
+        return "showPic";
     }
 
 
     @GetMapping("/{path}")
-    public String path(@PathVariable String path){
+    public String path(@PathVariable String path) {
         return path;
     }
 }

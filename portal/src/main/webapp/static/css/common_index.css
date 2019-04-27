@@ -2,31 +2,36 @@
     position: static;
 }
 
-.ih-sugbox{
+.ih-sugbox {
     width: 542px;
     padding: 25px 30px;
     border: 1px solid #ddd;
     background: #fff;
-    box-shadow: 2px 2px 6px 0 rgba(0,0,0,.2);
+    box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, .2);
     overflow: hidden;
 }
-.ih-sugbox1{
+
+.ih-sugbox1 {
     width: 560px;
     padding: 0;
 }
-.ih-sugbox2{
+
+.ih-sugbox2 {
     width: 402px;
     padding: 8px 20px;
 }
-.toltal-city{
+
+.toltal-city {
     margin-bottom: 14px;
     font-size: 12px;
     color: #999;
 }
-.area-tit{
+
+.area-tit {
     border-bottom: 2px solid #ddd;
 }
-.area-tit li{
+
+.area-tit li {
     position: relative;
     float: left;
     padding: 0 13px 10px 13px;
@@ -37,10 +42,11 @@
     cursor: pointer;
 }
 
-.area-tit .act,.area-tit li.hover{
+.area-tit .act, .area-tit li.hover {
     color: #49f;
 }
-.area-tit li.act:after,.area-tit li:hover:after{
+
+.area-tit li.act:after, .area-tit li:hover:after {
     pointer-events: none;
     position: absolute;
     z-index: 999;
@@ -53,11 +59,13 @@
     border-style: solid;
     border-width: 0 0 3px 0 !important;
 }
+
 .destination-city {
     padding-bottom: 8px;
     border-bottom: 1px dashed #ddd;
 }
-.destination-city a{
+
+.destination-city a {
     float: left;
     width: 79px;
     height: 26px;
@@ -67,17 +75,21 @@
     font-size: 14px;
     color: #333;
 }
-.destination-city a:hover{
+
+.destination-city a:hover {
     color: #49f !important;
     background: #ecf5ff;
 }
-.sug-recommend p{
+
+.sug-recommend p {
     margin-top: 20px;
 }
-.sug-recommend .sug-recommendp2{
+
+.sug-recommend .sug-recommendp2 {
     margin-top: 12px;
 }
-.sug-recommend a{
+
+.sug-recommend a {
     display: inline-block;
     height: 26px;
     line-height: 26px;
@@ -86,45 +98,55 @@
     font-size: 14px;
     color: #333;
 }
-.sug-recommend a:hover{
+
+.sug-recommend a:hover {
     color: #49f;
     background: #ecf5ff;
 }
-.sug-recommend .recom-tit{
+
+.sug-recommend .recom-tit {
     font-weight: 700;
     margin-right: 14px;
-    cursor:  default;
+    cursor: default;
 }
-.sug-recommend .recom-tit i{
+
+.sug-recommend .recom-tit i {
     margin-right: 8px;
 }
-.sug-recommend .recom-country,.sug-recommend .recom-country:hover {
+
+.sug-recommend .recom-country, .sug-recommend .recom-country:hover {
     color: #24b28d;
     background: none;
 }
-.sug-recommend .recom-theme,.sug-recommend .recom-theme:hover{
+
+.sug-recommend .recom-theme, .sug-recommend .recom-theme:hover {
     color: #f5a025;
     background: none;
 }
-.ih-sugbox2 .key-tit{
+
+.ih-sugbox2 .key-tit {
     font-weight: 700;
     font-size: 14px;
     color: #555;
     margin: 12px 0 6px 0;
 }
-.ih-sugbox2 .key-tit i{
+
+.ih-sugbox2 .key-tit i {
     margin-right: 6px;
 }
-.ih-sugbox2 .key-cont{
+
+.ih-sugbox2 .key-cont {
     line-height: 32px;
     margin-left: 20px;
     border-bottom: 1px dashed #ddd;
     padding-bottom: 6px;
 }
-.borbnone{
+
+.borbnone {
     border-bottom: none !important;
 }
-.ih-sugbox2 .key-cont a{
+
+.ih-sugbox2 .key-cont a {
     float: left;
     display: inline-block;
     height: 26px;
@@ -134,13 +156,16 @@
     font-size: 14px;
     margin: 0 8px 6px 0;
 }
-.ih-sugbox2 .key-cont a:hover{
+
+.ih-sugbox2 .key-cont a:hover {
     color: #49f;
     background: #ecf5ff;
 }
+
 .dest-sear-contxt .fl {
     width: 350px !important;
 }
+
 .dest-sear-contxt .fr {
     width: 140px !important;
 }

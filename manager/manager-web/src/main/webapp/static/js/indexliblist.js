@@ -8,7 +8,7 @@ layui.use(['form', 'table', 'jquery', 'admin'], function () {
         $ = layui.jquery,
         admin = layui.admin;
 
-    $("#btnImport").click(function(){
+    $("#btnImport").click(function () {
         //点击后禁用的代码自己完成
         $.post(
             //url
@@ -16,7 +16,7 @@ layui.use(['form', 'table', 'jquery', 'admin'], function () {
             //data
             null,
             //success
-            function(data){
+            function (data) {
                 console.log(data);
             },
             //dataType

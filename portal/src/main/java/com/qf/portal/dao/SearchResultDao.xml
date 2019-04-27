@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qf.portal.dao.SearchResultDao">
+    <select id="searchByName" parameterType="com.qf.portal.pojo.po.SearchResult" resultType="com.qf.portal.pojo.Poetry">
+        select * from
+        poetry
+        where
+        poetry_author
+        like concat('%',concat(#{searchName},'%'))
+
+        or poetry_title like concat('%',concat(#{searchName},'%'))
+        limit #{offSet},#{pageSize};
+
+    </select>
+
+    <select id="findcount" parameterType="com.qf.portal.pojo.po.SearchResult" resultType="java.lang.Integer">
+        select count(*) from poetry
+        where
+        poetry_author
+        like concat('%',concat(#{searchName},'%'))
+
+        or poetry_title like concat('%',concat(#{searchName},'%'))
+    </select>
+
+</mapper>

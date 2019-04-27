@@ -22,10 +22,10 @@ public class CatgoryServiceImpl implements CatgoryService {
 
     @Override
     public void importAllMessage() {
-       List<Message> dtoList = messageMapper.listmesages();
+        List<Message> dtoList = messageMapper.listmesages();
         System.out.println(dtoList);
-       try{
-        for (Message dto : dtoList) {
+        try {
+            for (Message dto : dtoList) {
                 SolrInputDocument document = new SolrInputDocument();
                 // 将每一个对象的每个属性对应到schema.xml中field
                 document.addField("id", dto.getId());
@@ -33,10 +33,10 @@ public class CatgoryServiceImpl implements CatgoryService {
                 document.addField("location", dto.getLocation());
                 document.addField("mdesc", dto.getMdesc());
                 // 添加到文档域
-               solrServer.add(document);
+                solrServer.add(document);
             }
-               solrServer.commit();
-       }catch (SolrServerException se) {
+            solrServer.commit();
+        } catch (SolrServerException se) {
             logger.error(se.getMessage(), se);
         } catch (Exception e) {
             logger.error(e.getMessage(), e);

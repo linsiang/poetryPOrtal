@@ -26,6 +26,7 @@ td {
     margin: 0;
     padding: 0;
 }
+
 input::-ms-clear {
     display: none;
 }
@@ -103,9 +104,10 @@ html body {
     font-size: 12px;
 }
 
-/ .left {
-      float: left;
-  }
+/
+.left {
+    float: left;
+}
 
 .right {
     float: right;
@@ -185,28 +187,33 @@ html body {
     position: relative;
     z-index: 1000;
 }
-.show_parent:hover .show_child{
+
+.show_parent:hover .show_child {
     display: block;
 }
-.show_parent .show_child{
+
+.show_parent .show_child {
     display: none;
 }
 
-.com_icon01{
+.com_icon01 {
     width: 42px;
     height: 42px;
     background: url(../images/com_icon01.gif) no-repeat;
 }
-.com_icon02,.com_icon03{
+
+.com_icon02, .com_icon03 {
     background: url(../images/icon201706.png) -42px -762px;
     width: 42px;
     height: 42px;
 }
-.com_icon03{
+
+.com_icon03 {
     background: url(../images/icon201706.png) -378px -772px;
     width: 9px;
     height: 8px;
 }
+
 .one_panic .only_phone {
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
     width: 210px;
@@ -319,6 +326,7 @@ html body {
     top: 36px;
     left: -15px;
 }
+
 .only_wx .com_arrow_wx {
     background: url(../images/icon201706.png) -656px -153px;
     width: 253px;
@@ -327,39 +335,40 @@ html body {
 }
 
 
-
 /*新增微信小程序*/
 
-.one_panicxcx:hover .only_xcx{
+.one_panicxcx:hover .only_xcx {
     display: block;
 }
-.one_panicxcx em{
+
+.one_panicxcx em {
     color: #09bb07;
 }
-.com_iconxcx{
+
+.com_iconxcx {
     background: url(../images/icon201706.png) -127px -763px;
     width: 42px;
     height: 42px;
     display: inline-block;
 }
-.only_xcx{
+
+.only_xcx {
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-    display: none;width:217px;
+    display: none;
+    width: 217px;
     position: absolute;
     height: 92px;
-    top:54px;
-    left:0px;
+    top: 54px;
+    left: 0px;
     background: url(../images/icon201706.png) no-repeat -397px -173px #fff;
-    padding:10px;
+    padding: 10px;
 }
-.only_xcx .com_arrow_xcx{
+
+.only_xcx .com_arrow_xcx {
     background: url(../images/icon201706.png) -211px -2px;
     height: 9px;
     width: 18px;
 }
-
-
-
 
 
 .branch_menu a {
@@ -438,9 +447,11 @@ html body {
     padding-top: 12px;
     z-index: 10;
 }
-#header .header_top .mt5{
+
+#header .header_top .mt5 {
     width: auto !important;
 }
+
 #header .logo {
     width: 130px;
     height: 48px;
@@ -494,7 +505,7 @@ html body {
 #nav ul.link li span.icon_reserve,
 #nav ul.link li span.icon_air,
 #nav ul.link li span.icon_parity,
-#nav ul.link li span.icon_apart{
+#nav ul.link li span.icon_apart {
     display: inline-block;
     position: absolute;
     top: -9px;
@@ -523,12 +534,14 @@ html body {
     background-position: -540px -29px;
     z-index: 1
 }
-#nav ul.link li span.icon_reserve{
+
+#nav ul.link li span.icon_reserve {
     left: 32px;
     width: 39px;
     background-position: -540px 0;
     z-index: 1;
 }
+
 #nav ul.link li span.icon_parity {
     left: 65px;
     width: 50px;
@@ -547,10 +560,10 @@ html body {
 }
 
 #nav ul.link li span.icon_air {
-    left:35px;
-    width:41px;
-    background-position:-589px 0;
-    z-index:1;
+    left: 35px;
+    width: 41px;
+    background-position: -589px 0;
+    z-index: 1;
 }
 
 #nav ul.link li.line {
@@ -753,47 +766,110 @@ html body {
 }
 
 
-#header .account .drop_box_log li a{width:60px;background:url(../images/icon201706.png) no-repeat #fff;display:block;padding-top:34px;text-align:center;text-decoration:none;color:#999;*zoom:1}
-#header .account .drop_box_log li a:hover{color:#36c;*zoom:1}
-#header .account .drop_box_log li.icon_d7 a{background-position:-147px -574px}
+#header .account .drop_box_log li a {
+    width: 60px;
+    background: url(../images/icon201706.png) no-repeat #fff;
+    display: block;
+    padding-top: 34px;
+    text-align: center;
+    text-decoration: none;
+    color: #999;
+    *zoom: 1
+}
 
-#header .account .drop_box_log li.icon_d2 a{background-position:-212px -574px}
+#header .account .drop_box_log li a:hover {
+    color: #36c;
+    *zoom: 1
+}
 
-#header .account .drop_box_log li.icon_d8 a{background-position:-276px -572px}
+#header .account .drop_box_log li.icon_d7 a {
+    background-position: -147px -574px
+}
 
-#header .account .drop_box_log li.icon_d4 a{background-position:-146px -628px}
+#header .account .drop_box_log li.icon_d2 a {
+    background-position: -212px -574px
+}
 
-#header .account .drop_box_log li.icon_d5 a{background-position:-210px -627px}
+#header .account .drop_box_log li.icon_d8 a {
+    background-position: -276px -572px
+}
 
-#header .account .drop_box_log li.icon_d6 a{background-position:-272px -624px}
+#header .account .drop_box_log li.icon_d4 a {
+    background-position: -146px -628px
+}
 
-#header .account .drop_box_log li.icon_d1 a{background-position:-146px -684px}
+#header .account .drop_box_log li.icon_d5 a {
+    background-position: -210px -627px
+}
 
-#header .account .drop_box_log li.icon_d3 a{background-position:-212px -684px}
+#header .account .drop_box_log li.icon_d6 a {
+    background-position: -272px -624px
+}
 
-#header .account .drop_box_log li.icon_d9 a{background-position:-276px -682px}
+#header .account .drop_box_log li.icon_d1 a {
+    background-position: -146px -684px
+}
 
-#header .account .drop_box_log li.icon_d7 a:hover{background-position:13px -573px}
+#header .account .drop_box_log li.icon_d3 a {
+    background-position: -212px -684px
+}
 
-#header .account .drop_box_log li.icon_d2 a:hover{background-position:-38px -573px}
+#header .account .drop_box_log li.icon_d9 a {
+    background-position: -276px -682px
+}
 
-#header .account .drop_box_log li.icon_d8 a:hover{background-position:-95px -572px}
+#header .account .drop_box_log li.icon_d7 a:hover {
+    background-position: 13px -573px
+}
 
-#header .account .drop_box_log li.icon_d4 a:hover{background-position:14px -628px}
+#header .account .drop_box_log li.icon_d2 a:hover {
+    background-position: -38px -573px
+}
 
-#header .account .drop_box_log li.icon_d5 a:hover{background-position:-42px -626px}
+#header .account .drop_box_log li.icon_d8 a:hover {
+    background-position: -95px -572px
+}
 
-#header .account .drop_box_log li.icon_d6 a:hover{background-position:-94px -624px}
+#header .account .drop_box_log li.icon_d4 a:hover {
+    background-position: 14px -628px
+}
 
-#header .account .drop_box_log li.icon_d1 a:hover{background-position:14px -684px}
+#header .account .drop_box_log li.icon_d5 a:hover {
+    background-position: -42px -626px
+}
 
-#header .account .drop_box_log li.icon_d3 a:hover{background-position:-42px -682px}
+#header .account .drop_box_log li.icon_d6 a:hover {
+    background-position: -94px -624px
+}
 
-#header .account .drop_box_log li.icon_d9 a:hover{background-position:-95px -682px}
+#header .account .drop_box_log li.icon_d1 a:hover {
+    background-position: 14px -684px
+}
 
-#header .account .drop_box_log .quit_log{height:40px;text-align:center;line-height:40px;border-top:1px solid #d9d9d9}
-#header .account .drop_box_log .quit_log a{display:block;color:#105baf;text-decoration:none}
-#header .account .drop_box_log .quit_log a:hover{background:#e6f4ff}
+#header .account .drop_box_log li.icon_d3 a:hover {
+    background-position: -42px -682px
+}
+
+#header .account .drop_box_log li.icon_d9 a:hover {
+    background-position: -95px -682px
+}
+
+#header .account .drop_box_log .quit_log {
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-top: 1px solid #d9d9d9
+}
+
+#header .account .drop_box_log .quit_log a {
+    display: block;
+    color: #105baf;
+    text-decoration: none
+}
+
+#header .account .drop_box_log .quit_log a:hover {
+    background: #e6f4ff
+}
 
 
 /* ===================== header and footer start ===================== */
@@ -869,9 +945,10 @@ html body {
     background-position: -362px -58px;
 }
 
-.footer_info_xcx{
-    background-position:-155px -56px;
+.footer_info_xcx {
+    background-position: -155px -56px;
 }
+
 .footer_copy {
     position: relative;
     text-align: center;

@@ -14,10 +14,11 @@
     <link rel="stylesheet" type="text/css" href="Wopop_files/style.css">
     <link rel="stylesheet" type="text/css" href="Wopop_files/userpanel.css">
     <link rel="stylesheet" type="text/css" href="Wopop_files/jquery.ui.all.css">
-
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body class="login" mycollectionplug="bind">
-
 
 
 <div class="login_m">
@@ -28,43 +29,45 @@
 
             <h2>昵称</h2>
             <label>
-                <input type="text" id="uname"name="uname" class="txt_input txt_input2" placeholder="姓名">
+                <input type="text" id="uname" name="uname" class="txt_input txt_input2" placeholder="姓名">
             </label>
             <h2>密码</h2>
             <label>
                 <input type="password" name="textfield2" id="pwd" class="txt_input" placeholder="密码">
             </label>
 
+            <h2>RECHECK</h2>
+            <label>
+                <input type="password" name="textfield2" id="repwd" class="txt_input" placeholder="确认密码">
+            </label>
 
 
             <div class="rem_sub">
-                <input type="submit"  class="sub_button" name="button" id="button" value="确定注册" style="opacity: 0.7;">
+                <input type="submit" class="sub_button" name="button" id="button" value="确定注册" style="opacity: 0.7;">
 
-                <input type="submit"  onclick="returnLogin()"  class="sub_button" name="returnLogin" id="register" value="返回登录" style="opacity: 0.7;">
+                <input type="submit" onclick="returnLogin()" class="sub_button" name="returnLogin" id="register"
+                       value="返回登录" style="opacity: 0.7;">
 
 
             </div>
 
 
-
-
         </div>
-        </div>
+    </div>
 
 
-
-
-        <!--login_padding  Sign up end-->
-    </div><!--login_boder end-->
+    <!--login_padding  Sign up end-->
+</div><!--login_boder end-->
 </div><!--login_m end-->
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 
 <script>
 
-    $("#button").click(function(){
+    $("#button").click(function () {
 
         var uname = $("#uname").val();
         var pwd = $("#pwd").val();
+        var repwd = $("#repwd").val();
 
         /*
                 alert($("#uname").val());
@@ -75,14 +78,14 @@
         $.ajax({
             type: "POST",
             dataType: 'json',
-            data:{uname:uname,pwd:pwd},
+            data: {uname: uname, pwd: pwd},
             url: "toRegister",
-            success: function(msg){
-                if(msg=="error"){
+            success: function (msg) {
+                if (msg == "error") {
                     alert("该用户已经存在,请重新输入你的昵称")
-                }else{
+                } else {
                     alert("注册成功,现在可以去登陆了.")
-                    location.href="index";
+                    location.href = "index";
                 }
             }
         });
@@ -120,21 +123,18 @@
         */
 
 
-
         /*        var uname = $("#uname").val();
                 var pwd = $("#pwd").val();
                 alert("uname = " + result1 +"pwd="+result2);*/
     });
 
 
-       $("#register").click(function(){
-           alert("I am fucking coming!!!");
-           location.href="login";
-       });
+    $("#register").click(function () {
+        alert("I am fucking coming!!!");
+        location.href = "login";
+    });
 
 </script>
-
-
 
 
 </body>

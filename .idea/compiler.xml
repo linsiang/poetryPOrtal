@@ -7,11 +7,6 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="commons" />
-        <module name="manager-dao" />
-        <module name="manager-pojo" />
-        <module name="manager-service" />
-        <module name="manager-serviceimpl" />
-        <module name="manager-web" />
         <module name="portal" />
       </profile>
     </annotationProcessing>

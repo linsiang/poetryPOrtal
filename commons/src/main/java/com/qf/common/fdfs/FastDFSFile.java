@@ -24,10 +24,11 @@ public class FastDFSFile implements Serializable {
      */
     private Long size;
 
-    public FastDFSFile(){
+    public FastDFSFile() {
 
     }
-    public FastDFSFile(byte[] content, String name, Long size){
+
+    public FastDFSFile(byte[] content, String name, Long size) {
         this.content = content;
         this.name = name;
         this.size = size;
@@ -36,21 +37,27 @@ public class FastDFSFile implements Serializable {
     public byte[] getContent() {
         return content;
     }
+
     public void setContent(byte[] content) {
         this.content = content;
     }
+
     public String getName() {
         return name;
     }
+
     public void setName(String name) {
         this.name = name;
     }
+
     public Long getSize() {
         return size;
     }
+
     public void setSize(Long size) {
         this.size = size;
     }
+
     public static long getSerialversionuid() {
         return serialVersionUID;
     }

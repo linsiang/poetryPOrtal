@@ -11,9 +11,9 @@
     <title>Title</title>
 </head>
 <body>
-    <script>
-        window.location="admin/index.html";
+<script>
+    window.location = "admin/index.html";
 
-    </script>
+</script>
 </body>
 </html>

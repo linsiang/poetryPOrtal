@@ -61,17 +61,17 @@ layui.use(['admin', 'jquery', 'table'], function () {
                 layer.msg("请选择至少一行后再批量删除！", {icon: 2});
             }
         },
-        reload:function(){
+        reload: function () {
             //模糊查询，提交一个异步请求到后台 {title}
             //val() 文本框 单选按钮 复选按钮
             //text()  html()
             var title = $("#title").val();
             //不为空
-            if($.trim(title).length > 0 ){
+            if ($.trim(title).length > 0) {
                 //文本框中有内容，表格重载
-                table.reload("articleList",{
-                    page:{curr:1},
-                    where:{title:title}
+                table.reload("articleList", {
+                    page: {curr: 1},
+                    where: {title: title}
                 });
             }
 

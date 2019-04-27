@@ -7,7 +7,7 @@ layui.define('tree', function (exports) {
         hint = layui.hint(),
         DISABLED = 'layui-disabled',
         win = $(window),
-        TreeSelect = function() {
+        TreeSelect = function () {
             this.v = '1.0.0';
         };
     /**
@@ -15,14 +15,14 @@ layui.define('tree', function (exports) {
      */
     TreeSelect.prototype.render = function (options) {
         var that = this,
-            othis =options? $(options.elem):null,
+            othis = options ? $(options.elem) : null,
             tips = '请选择',
             CLASS = 'layui-form-select',
             TITLE = 'layui-select-title',
             NONE = 'layui-select-none',
             initValue = '',
             thatInput,
-            isString = function(obj) {
+            isString = function (obj) {
                 return Object.prototype.toString.call(obj) === "[object String]";
             },
             settext = function (data, val, input) {
@@ -36,14 +36,14 @@ layui.define('tree', function (exports) {
                             settext.call(this, o.children, val, input);
                     });
             },
-            hide = function(e, clear) {
+            hide = function (e, clear) {
                 if (!$(e.target).parent().hasClass(TITLE) || clear) {
                     $('.' + CLASS).removeClass(CLASS + 'ed ' + CLASS + 'up');
                     thatInput && initValue && thatInput.val(initValue);
                 }
                 thatInput = null;
             },
-            events = function(reElem,treeid, disabled) {
+            events = function (reElem, treeid, disabled) {
                 var title = reElem.find('.' + TITLE),
                     input = title.find('input'),
                     tree = reElem.find('.layui-tree'),
@@ -72,14 +72,14 @@ layui.define('tree', function (exports) {
                             reElem.addClass(CLASS + 'up');
                         }
                     },
-                    hideDown = function() {
+                    hideDown = function () {
                         reElem.removeClass(CLASS + 'ed ' + CLASS + 'up');
                         input.blur();
                     };
 
                 //点击标题区域
                 title.on('click',
-                    function(e) {
+                    function (e) {
                         reElem.hasClass(CLASS + 'ed')
                             ? (
                                 hideDown()
@@ -93,13 +93,13 @@ layui.define('tree', function (exports) {
 
                 //点击箭头获取焦点
                 title.find('.layui-edge').on('click',
-                    function() {
+                    function () {
                         input.focus();
                     });
 
                 //键盘事件
                 input.on('keyup',
-                    function(e) {
+                    function (e) {
                         var keyCode = e.keyCode;
                         //Tab键
                         if (keyCode === 9) {
@@ -107,7 +107,7 @@ layui.define('tree', function (exports) {
                         }
                     })
                     .on('keydown',
-                        function(e) {
+                        function (e) {
                             var keyCode = e.keyCode;
                             //Tab键
                             if (keyCode === 9) {
@@ -119,7 +119,7 @@ layui.define('tree', function (exports) {
                 //渲染tree
                 layui.tree({
                     elem: "#" + treeid,
-                    click: function(obj) {
+                    click: function (obj) {
                         othis.val(obj.id).removeClass('layui-form-danger');
                         input.val(obj.name);
                         tree.find(".youyao-this").removeClass("youyao-this");
@@ -132,13 +132,13 @@ layui.define('tree', function (exports) {
                 });
                 //点击树箭头不隐藏
                 tree.find(".layui-tree-spread").on('click',
-                    function() {
+                    function () {
                         return false;
                     });
                 //关闭下拉
                 $(document).off('click', hide).on('click', hide);
             },
-            init = function(treeid) {
+            init = function (treeid) {
                 var hasRender = othis.next('.' + CLASS),
                     disabled = othis[0].disabled,
                     value = othis.value,
@@ -169,7 +169,7 @@ layui.define('tree', function (exports) {
                 othis.after(reElem);
                 events.call(this, reElem, treeid, disabled);
             },
-            reset = function(filter) {
+            reset = function (filter) {
                 var trees = filter ? $('*[lay-filter="' + filter + '"]') : $(".layui-input-treeselect");
                 layui.each(trees,
                     function (_, one) {
@@ -179,9 +179,9 @@ layui.define('tree', function (exports) {
                     });
             };
         if (!options)
-            return reset.call(this,null);
+            return reset.call(this, null);
         if (options.filter)
-            return reset.call(this,options.filter);
+            return reset.call(this, options.filter);
         if (!othis[0])
             return hint.error('layui.treeSelect 没有找到' + options.elem + '元素');
         if (!options.data)
@@ -198,7 +198,7 @@ layui.define('tree', function (exports) {
                 url: options.data,
                 dataType: "json",
                 type: !options.method ? "POST" : options.method,
-                success: function(d) {
+                success: function (d) {
                     options.data = d;
                     treeData = options;
                     init.call(this, treeid);

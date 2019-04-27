@@ -2,6 +2,7 @@ package com.qf.common.util;
 
 /**
  * 字符串工具类
+ *
  * @author dhc
  * @version V1.0
  */
@@ -96,15 +97,14 @@ public class StrKit {
         char[] fromArray = stringWithUnderline.toCharArray();
         char[] toArray = new char[fromArray.length];
         int j = 0;
-        for (int i=0; i<fromArray.length; i++) {
+        for (int i = 0; i < fromArray.length; i++) {
             if (fromArray[i] == '_') {
                 // 当前字符为下划线时，将指针后移一位，将紧随下划线后面一个字符转成大写并存放
                 i++;
                 if (i < fromArray.length) {
                     toArray[j++] = Character.toUpperCase(fromArray[i]);
                 }
-            }
-            else {
+            } else {
                 toArray[j++] = fromArray[i];
             }
         }
@@ -121,7 +121,7 @@ public class StrKit {
 
     public static String join(String[] stringArray, String separator) {
         StringBuilder sb = new StringBuilder();
-        for (int i=0; i<stringArray.length; i++) {
+        for (int i = 0; i < stringArray.length; i++) {
             if (i > 0) {
                 sb.append(separator);
             }
